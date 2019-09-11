@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="css/styles.css">
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <section class="header">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Virtual Stand Up</a>
+      </div>
+    </nav>
+  </section>
+
+  <section class="section section-messages">
+    <div class="container">
+      <div class="row">
+        <div class="msg msg-info z-depth-3 msg-success" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-filter">
+    <div class="container">
+      <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <select class="filter">
+            <option value="" disabled selected>Select Team Member</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Filter By Team Member</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-notes">
+    <div class="notes-output container">
+
+    </div>
+  </section>
+
+
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating yellow darken-1 modal-trigger" href="#newProject"><i
+            class="material-icons">folder_special</i></a></li>
+      <li><a class="btn-floating blue modal-trigger" href="#newMember"><i class="material-icons">people</i></a></li>
+      <li><a class="btn-floating green modal-trigger" href="#newNote"><i class="material-icons">add_comment</i></a></li>
+    </ul>
+  </div>
+
+  <!-- New Note Model -->
+  <div id="newNote" class="modal">
+    <div class="modal-content">
+      <h5 class="center">Add Standup Note</h5>
+      <div class="row">
+        <form class="col s12">
+
+          <div class="input-field col s6">
+            <select class="selectTeamMembers">
+            </select>
+            <label>Team Member</label>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s6">
+              <select class="selectProject">
+              </select>
+              <label>Project</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="workYesterday" type="text" class="validate">
+              <label for="workYesterday">The work that you completed yesterday</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="workToday" type="text" class="validate">
+              <label for="workToday">The work that you plan on doing today</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="impediments" type="text" class="validate">
+              <label for="impediments">Impediments experienced</label>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close btn red white-text btnAddNote">Add Note</a>
+    </div>
+  </div>
+
+  <!-- New Team Member Modal -->
+  <div id="newMember" class="modal">
+    <div class="modal-content">
+      <h5 class="center">Add Team Member</h5>
+      <form class="col s12">
+        <div class="input-field col s12">
+          <input id="teamMemberName" type="text" class="validate">
+          <label for="teamMemberName">Name of Team Member</label>
+        </div>
+      </form>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close btn red white-text btnAddMember">Add Team Member</a>
+    </div>
+  </div>
+
+  <!-- New Project Model -->
+  <div id="newProject" class="modal">
+    <div class="modal-content">
+      <h5 class="center">Add New Project</h5>
+      <form class="col s12">
+        <div class="input-field col s12">
+          <input id="projectName" type="text" class="validate">
+          <label for="projectName">Project Name</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="projectDescription" type="text" class="validate">
+          <label for="projectDescription">Project Description</label>
+        </div>
+      </form>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close btn red white-text btnAddProject">Add Project</a>
+    </div>
+  </div>
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

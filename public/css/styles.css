@@ -1,0 +1,13 @@
+.msg {
+    width:100%;
+    border: 0.5px solid;
+    padding:10px;
+    margin: 20px;
+    color: grey;
+  }
+  
+  .msg-info{
+    border-color: green;
+    background-color: lightgreen;
+    color: white;
+  }
