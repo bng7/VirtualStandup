@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/api', api);
 
 //MongoDB connection
-mongoose.connect('mongodb://localhost:27017/virtualstandups', { useNewUrlParser: true});
+mongoose.connect('mongodb://52.65.244.131:27017/virtualstandups', { useNewUrlParser: true });
 
 const db = mongoose.connection;
 
