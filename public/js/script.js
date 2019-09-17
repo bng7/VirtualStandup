@@ -29,7 +29,7 @@ btnAddMember.addEventListener('click', () => {
         name: teamMemberName.value
     }
 
-    fetch('http://3.24.107.20/api/team', {
+    fetch('http://3.24.27.105/api/team', {
         method: 'POST',
         body: JSON.stringify(teamMember),
         headers: {
@@ -50,7 +50,7 @@ btnAddProject.addEventListener('click', () => {
         description: projectDescription.value
     }
 
-    fetch('http://3.24.107.20/api/projects', {
+    fetch('http://3.24.27.105/api/projects', {
         method: 'POST',
         body: JSON.stringify(project),
         headers: {
@@ -68,7 +68,7 @@ btnAddProject.addEventListener('click', () => {
 filter.addEventListener('change', (e) => {
     let teamMember = e.target.value;
 
-    fetch(`http://3.24.107.20/api/standup/${teamMember}`)
+    fetch(`http://3.24.27.105/api/standup/${teamMember}`)
         .then(res => res.json())
         .then(res => {
             let notes = res.notes;
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
 
 function getNotes() {
-    fetch('http://3.24.107.20/api/standup')
+    fetch('http://3.24.27.105/api/standup')
         .then(res => res.json())
         .then(res => {
             let notes = res.notes;
@@ -156,7 +156,7 @@ async function populateProjects() {
 
 function getTeamMembers() {
     return new Promise((resolve, reject) => {
-        fetch('http://3.24.107.20/api/team')
+        fetch('http://3.24.27.105/api/team')
             .then(res => res.json())
             .then(res => {
                 let teamMembers = res.teamMembers;
@@ -167,7 +167,7 @@ function getTeamMembers() {
 
 function getProjects() {
     return new Promise((resolve, reject) => {
-        fetch('http://3.24.107.20/api/projects')
+        fetch('http://3.24.27.105/api/projects')
             .then(res => res.json())
             .then(res => {
                 let projects = res.projects;
@@ -185,7 +185,7 @@ function addStandupNote() {
         impediments: impediments.value
     }
 
-    fetch('http://3.24.107.20/api/standup', {
+    fetch('http://3.24.27.105/api/standup', {
         method: 'POST',
         body: JSON.stringify(note),
         headers: {
