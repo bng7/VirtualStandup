@@ -1,0 +1,9 @@
+#! /bin/sh
+
+ssh ec2-user@3.24.107.20 <<EOF
+
+    cd ~/VirtualStandup
+
+    git pull origin master
+
+    
