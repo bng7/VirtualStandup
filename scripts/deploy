@@ -6,4 +6,18 @@ ssh ec2-user@3.24.107.20 <<EOF
 
     git pull origin master
 
-    
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+    . ~/.nvm/nvm.sh
+
+    nvm install node
+
+    npm install
+
+    npm install -g nodemon pm2
+
+    pm2 restart ecosystem.config.js
+
+    exit
+
+EOF
